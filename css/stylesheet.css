@@ -1,0 +1,94 @@
+.top{
+    height: 200px;
+    width: 100%;
+    background-color: aqua;
+    border-bottom: 1px black outset;
+}
+.text{
+    text-align: center;
+}
+.bottom{
+    background-color: aqua;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+}
+.red{
+    background-color: red;
+}
+#square{
+    height: 100px;
+    width: 100px;
+    background-color: #57ff22;
+}
+/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
+
+.raise {
+  --color: #ffa260;
+  --hover: #e5ff60;
+}
+
+
+
+button {
+  color: var(--color);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+body {
+  color: #fff;
+  background: #17181c;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+code {
+  color: #e4cb58;
+  font: inherit;
+}
+
+/*
+  As a bonus, I will now begin including a shoddily written limerick or other high literary masterpiece in all my pens. Misspelled visual rhymes and two left feet are the spice of life. You're welcome.
+
+  [1/?] Glass cannon
+  There was a young dev on the frontend
+  delighted to see folks affronted
+    They claimed satisfaction
+    provoking a reaction
+  but threw quite a fit when confronted
+*/
